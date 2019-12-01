@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" contesnt="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/trevari_favicon-32x32.png') }}">
+
+    {% if title %}
+        <title>트레바리 - {{ title }}</title>
+    {% else %}
+        <title>트레바리 독후감 모여라</title>
+    {% endif %}
+</head>
+
+<header>
+    <div class="menu-header">
+        <a href="https://trevari.co.kr" target="_blank">
+            <img class="logo" src="{{ logo_image }}">
+        </a>
+        <div class="menu-header">
+            <a href="{{ url_for('about') }}">
+                <img class="about" src="{{ about_image }}">
+            </a>              
+            <a href="{{ url_for('home') }}">
+                <img class="home" src="{{ home_image }}">
+            </a>
+            <div class="button">
+                <a href="{{ url_for('call_crawler') }}">독후감 가져오기</a>
+            </div> 
+        </div>
+        
+    </div> 
+
+    <h1 class="banner">TREVARI 독후감 검색</h1>
+</header>
+
+<body> 
+    {% block content %}
+    {% endblock content %}
+</body>
+
+</html>

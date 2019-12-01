@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+    
+{% block content %} 
+    <form enctype = "multipart/form-data" action="" method="post">
+        {{ form.hidden_tag() }}
+        <div class="form-group-search">
+            <div>
+                {{ form.book_title(class="text-field")}}
+            </div>
+            <div>
+                {{ form.submit(class="button-search")}}
+            </div>    
+        </div>
+    
+    </form>
+    {% if books %}
+        {% for book in books %}
+            <div class="book-list">
+                <a class="book-title" href="{{ url_for('result_reviews', book_title=book) }}">{{ book }}</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        {# <p>일치하는 도서명이 없습니다.</p> #}
+    {% endif %}
+    
+    {% if reviews %}
+        <div class="current-book">
+            도서명: {{ title }}
+        </div>
+        
+        {% for review in reviews %}
+            <div class="review-list">
+                <a class="review-title" href="{{ review_url }}{{ review['id'] }}" target="_blank">{{ review["title"] }}</a>
+                {# {{ review["id"] }} #}
+            </div>
+        {% endfor %}
+    {% endif %}   
+{% endblock content %}
+

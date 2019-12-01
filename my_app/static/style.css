@@ -1,0 +1,141 @@
+:root {
+    --main-menu-color: white;
+    --main-bg-color: #FF8C00;
+}
+
+body {
+    margin: 0;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin: auto 10px;
+}
+
+.home, .about {
+    width: 30px;
+    height: 30px;
+    margin: 5px 10px 5px 0px;
+}
+
+.about-page {
+    margin: 10px auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+.button {
+    width: 130px;
+    height: 30px;
+    border: none;
+    background-color: var(--main-bg-color);
+    border-radius: 10px;  
+    margin: auto 10px auto 0;
+    text-align: center;
+    /*display: none;/* for user */
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold; 
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/*
+.menu_left {
+    float: left;
+}
+
+.menu_right {
+    float: right;
+}
+*/
+.banner {
+    background-color: var(--main-bg-color);
+    text-align: center;
+    margin: 0;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-group-search {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-field {
+    margin: auto 1px;
+    width: 300px;
+    height: 24px;
+    border-radius: 5px;  
+    border: 2px solid;
+    border-color: var(--main-bg-color);
+}
+
+.button-search {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;  
+    border: none;
+    color: white;
+    background-color: var(--main-bg-color);
+}
+
+.book-list {
+    text-align: center;
+    margin: 10px auto;
+}
+.book-title {
+    text-decoration: none;
+    color: #ffbe76;
+    font-size: 20px;
+}
+.book-title:hover:not(.active) {
+    color: var(--main-bg-color);
+    font-weight: bold;
+}
+
+.current-book {
+    text-align: center;
+    margin: 30px 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.review-list {
+    text-align: center;
+    margin: 5px 5px;
+}
+.review-title {
+    text-decoration: none;
+    color: grey;
+}
+.review-title:hover:not(.active) {
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
